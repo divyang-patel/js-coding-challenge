@@ -33,9 +33,11 @@ function getMaxOccurringCharWithRegex(str){
   
   //initialize object to store max occurring letter and count of occurrence
   let max = {letter: [], count: 0};
+  //empty array to store unique letters in a string
   let temp = [];
   for (let s of str){
     
+    //If letter is counted already, skip to the next one or push in the temp
     if (temp.includes(s)){
       continue;
     }else{
